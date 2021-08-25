@@ -3,7 +3,7 @@
       xmlns:p="tapestry:parameter">
 
       <body>
-
+                <t:Kane/>
               <h1>List Employees</h1>
 
               <t:grid t:source="employees">
