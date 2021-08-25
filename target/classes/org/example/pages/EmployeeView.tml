@@ -1,0 +1,14 @@
+<html t:type="layout" title="Details | loginStudent"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+
+            <body>
+                    <h1>View Employee</h1>
+
+                    <t:beandisplay object="employee" include="id,firstName,lastName,age">
+
+                    </t:beandisplay>
+                </body>
+
+</html>

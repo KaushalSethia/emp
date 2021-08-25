@@ -1,0 +1,21 @@
+<html t:type="layout" title="Login | loginStudent"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+
+      <div>
+            <t:form t:id = "employeeLogin">
+                <label for="username">Username:</label><br/>
+                  <input t:type="TextField" t:id="usernameField" t:value="username"/><br/>
+
+                  <label for="password">Password:</label><br/>
+                  <input t:type="PasswordField" t:id="passwordField" t:value="password"/>
+
+                  <t:submit class="btn btn-large btn-primary" value="Sign in"/>
+
+            </t:form>
+      </div>
+
+
+
+</html>

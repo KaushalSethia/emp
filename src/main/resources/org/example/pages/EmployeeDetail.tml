@@ -1,0 +1,35 @@
+<html t:type="layout" title="Details | loginStudent"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+      <body>
+
+              <h1>List Employees</h1>
+
+              <t:grid t:source="employees">
+
+              </t:grid>
+
+              <div>
+                          <t:form t:id = "employeeDetail">
+                            <t:errors/>
+                                <label for="fName">First Name: </label><br/>
+                                <input t:type="TextField" t:id="fName" t:value="firstname"/><br/>
+
+                                <label for="lName">Last Name: </label><br/>
+                                <input t:type="TextField" t:id="lName" t:value="lastname"/><br/>
+
+                                <label for="id">Id: </label><br/>
+                                 <input t:type="TextField" t:id="id" t:value="id"/><br/>
+
+                                <label for="age">Age: </label><br/>
+                                 <input t:type="TextField" t:id="age" t:value="age"/><br/>
+
+                                <t:submit class="btn btn-large btn-primary" value="Save"/>
+
+                          </t:form>
+                    </div>
+
+          </body>
+
+</html>
