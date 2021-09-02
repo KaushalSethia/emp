@@ -2,10 +2,7 @@ package org.example.pages;
 
 import javafx.scene.canvas.GraphicsContext;
 import org.apache.tapestry5.FormValidationControl;
-import org.apache.tapestry5.annotations.Component;
-import org.apache.tapestry5.annotations.InjectComponent;
-import org.apache.tapestry5.annotations.OnEvent;
-import org.apache.tapestry5.annotations.Property;
+import org.apache.tapestry5.annotations.*;
 import org.apache.tapestry5.corelib.components.Form;
 import org.apache.tapestry5.hibernate.annotations.CommitAfter;
 import org.apache.tapestry5.http.Link;
@@ -21,12 +18,13 @@ import org.hibernate.Session;
 import java.util.*;
 
 public class EmployeeDetail {
-    List<Employee> employees;
+
+    @Property
+    private List<Employee> employees;
 
 
     /*@Component
     private Kane kane;*/
-
 
     @Property
     private Employee employee;
@@ -66,19 +64,19 @@ public class EmployeeDetail {
 
     EmployeeList employeeList = new EmployeeList();
 
-    public List<Employee> getEmployees(){
+    /*public List<Employee> getEmployees(){
 
         return employeeDao.getEmployee();
-    }
+    }*/
 
     void setupRender() {
         if (employees == null) {
-            employees = employeeList.getEmployeeList();
+            employees = employeeDao.getEmployee();
         }
     }
 
     void onValidateFromEmployeeDetail(){
-        if(firstname == null || lastname == null || id== 0 || age<18){
+        if((firstname == null || lastname == null || id <=0 || age<18)){
             form.recordError( "Value must be entered correctly.");
         }
     }

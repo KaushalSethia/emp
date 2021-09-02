@@ -8,6 +8,7 @@ org\example\components\Layout.class
 org\example\pages\EmployeeView.class
 org\example\pages\Error404.class
 org\example\services\AppModule.class
+org\example\dao\EmployeeDao.class
 org\example\services\DevelopmentModule.class
 org\example\App.class
 org\example\pages\EmployeeLogin.class
@@ -18,3 +19,4 @@ org\example\services\UserValidationImpl.class
 org\example\services\QaModule.class
 org\example\pages\EmployeeDetail.class
 org\example\pages\Index.class
+org\example\dao\EmployeeDaoImpl.class
